@@ -1,0 +1,99 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: hsla(0, 0%, 100%, 0.87);
+}
+
+select,
+button {
+  border: none;
+  background-color: #0f2e3b;
+  color: hsla(0, 0%, 100%, 0.87);
+  font-size: 16px;
+  font-weight: 500;
+}
+
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+.container {
+  width: 100%;
+}
+
+header {
+  max-width: 1915px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.7;
+  background-color: #0f2e3b;
+  color: hsla(0, 0%, 100%, 0.87);
+}
+
+header li {
+  display: flex;
+  align-items: center;
+  padding: 0rem 1rem;
+  margin-right: 5px;
+}
+
+.btn-primary--green {
+  background-color: #228b22;
+  height: 50px;
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.left a:hover,
+header button:hover,
+header select:hover,
+header li:hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 69%);
+}
+
+/* login container */
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.logIn-container {
+  width: 21.93%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: white;
+}
+
+.logIn-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.logIn-container .top {
+  border-bottom: 1px solid #eceff1;
+  padding: 10px;
+  margin-bottom: 25px;
+}
+
+input {
+  background-color: #eceff1;
+}
+
+.d-none {
+  display: none;
+}

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration Form</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <div class="container">
@@ -24,10 +25,10 @@
                 <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"></path>
               </svg>
             </li>
-            <li>ამოცანები</li>
-            <li>კონტესტები</li>
-            <li>რეიტინგი</li>
-            <li>გაკვეთილები</li>
+            <li><a href="#">ამოცანები</a></li>
+            <li><a href="#">კონტესტები</a></li>
+            <li><a href="#">რეიტინგი</a></li>
+            <li><a href="#">გაკვეთილები</a></li>
           </ul>
         </div>
         <div class="right">
@@ -54,13 +55,37 @@
                 ></path>
               </svg>
             </li>
-            <li><button class="btn btn-primary--green">შესვლა</button></li>
+            <li>
+              <button
+                onclick="logIn()"
+                class="btn btn-primary--green"
+                id="logIn"
+              >
+                შესვლა
+              </button>
+            </li>
             <li>
               <button class="brn brn-second--default">რეგისტრაცია</button>
             </li>
           </ul>
         </div>
       </header>
+      <main>
+        <div class="logIn-container">
+          <div class="top"><p>შესვლა</p></div>
+          <form action="/">
+            <label for="/">მომხმარებლის სახელი ან ფოსტა</label>
+            <input type="text" required />
+            <label for="/">პაროლი</label>
+            <input type="password" required />
+            <p>დაგავიწდა პაროლი? <a href="#">აღადგინე</a></p>
+            <button onclick="logIn()" class="btn btn-primary--green" id="logIn">
+              შესვლა
+            </button>
+          </form>
+        </div>
+      </main>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
