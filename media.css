@@ -1,0 +1,116 @@
+@media screen and (max-width: 1024px) {
+    header {
+        margin-bottom: 60px;
+    }
+
+    .logInCont {
+        width: 90%;
+        max-width: 500px;
+        padding: 15px 25px 30px;
+    }
+
+    .right ul li {
+        padding: 0 0.5rem;
+    }
+
+    .left ul li {
+        padding: 0 0.5rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+        margin-bottom: 40px;
+    }
+
+    header .left {
+        display: none;
+    }
+
+    header .home {
+        display: block;
+    }
+
+    header .right {
+        width: 100%;
+    }
+
+    header .left ul,
+    header .right ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 5px 0;
+    }
+
+    header li {
+        margin: 5px;
+    }
+
+    .btn-primary--green {
+        height: 40px;
+    }
+
+    .logInCont {
+        width: 90%;
+        padding: 15px 20px 25px;
+    }
+
+    .name-surname {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .button-container {
+        margin-top: 30px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .line {
+        width: 80%;
+        height: 1px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header li {
+        font-size: 14px;
+    }
+
+    header svg {
+        width: 22px;
+        height: 22px;
+    }
+
+    .logInCont {
+        width: 95%;
+        padding: 10px 15px 20px;
+    }
+
+    input {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    label p {
+        font-size: 13px;
+    }
+
+    .top {
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+
+    .btn-primary--green {
+        padding-left: 12px;
+        padding-right: 12px;
+        font-size: 14px;
+    }
+}
