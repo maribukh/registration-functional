@@ -169,6 +169,10 @@ input {
   border-radius: 5px;
 }
 
+input:hover {
+  cursor: pointer;
+}
+
 .inputClass:focus {
   transition: border-color 250ms, background-color 250ms;
   border-color: #b0bec5;
@@ -186,6 +190,7 @@ input {
   position: relative;
 }
 
+
 .password-container .eye {
   position: absolute;
   bottom: 20%;
@@ -197,6 +202,35 @@ input {
   grid-template-columns: repeat(2, auto);
   column-gap: 15px;
   width: 100%;
+}
+
+footer {
+  padding: 1em;
+  gap: 1em;
+  margin-top: 50px;
+  display: flex;
+  -webkit-box-pack: center;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f2e3b;
+  color: hsl(0deg 0% 100% / 87%);
+}
+
+footer a {
+  padding: 5px;
+  transition: background-color 350ms;
+}
+
+.footer-information {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.line {
+  width: 1px;
+  height: 24px;
+  background-color: hsl(0deg 0% 100% / 87%);
 }
 
 .d-none {
