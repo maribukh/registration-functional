@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: url(./body.svg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
 a {
   text-decoration: none;
   color: hsla(0, 0%, 100%, 0.87);
@@ -40,6 +48,7 @@ header {
   line-height: 1.7;
   background-color: #0f2e3b;
   color: hsla(0, 0%, 100%, 0.87);
+  margin-bottom: 101px;
 }
 
 header li {
@@ -67,31 +76,127 @@ header li:hover {
 /* login container */
 
 main {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
-.logIn-container {
-  width: 21.93%;
+.logInCont {
+  width: 500px;
   display: flex;
   flex-direction: column;
   text-align: center;
   background-color: white;
+  color: #757575;
+  padding: 15px 40px 40px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 16px 0px;
 }
 
-.logIn-container form {
+form {
   display: flex;
   flex-direction: column;
 }
 
-.logIn-container .top {
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-bottom: 1px solid #eceff1;
   padding: 10px;
   margin-bottom: 25px;
+  font-size: 18px;
+}
+
+label {
+  display: flex;
+  align-items: end;
+  margin-bottom: 4px;
+  font-size: 14px;
+}
+
+label p {
+  font-weight: bold;
+  color: #757575;
+}
+
+.logIn-container a {
+  color: #00f;
+}
+
+.button-container {
+  min-width: 200px;
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 5px;
+}
+
+.button-container .btn {
+  border-radius: 5px;
+  min-width: 200px;
+}
+
+.logInCon.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.7em 1em;
+  outline: none;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: auto;
+  border: none;
+  border-radius: 5px;
+}
+
+.logInCont .btn:hover {
+  background-color: #1e7e1e;
 }
 
 input {
+  width: 100%;
   background-color: #eceff1;
+  border: 2px solid #eceff1;
+  font-size: 16px;
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  height: 46px;
+  border-radius: 5px;
+}
+
+.inputClass:focus {
+  transition: border-color 250ms, background-color 250ms;
+  border-color: #b0bec5;
+  background-color: #fff;
+  outline: none;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 7px;
+}
+
+.boxInput {
+  padding-top: 15px;
+}
+
+.input-container {
+  padding-top: 15px;
+  position: relative;
+}
+
+.password-container .eye {
+  position: absolute;
+  bottom: 20%;
+  right: 9px;
+}
+
+.name-surname {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  column-gap: 15px;
+  width: 100%;
 }
 
 .d-none {

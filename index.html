@@ -71,17 +71,95 @@
         </div>
       </header>
       <main>
-        <div class="logIn-container">
+        <div class="logIn-container logInCont d-none">
           <div class="top"><p>შესვლა</p></div>
           <form action="/">
-            <label for="/">მომხმარებლის სახელი ან ფოსტა</label>
-            <input type="text" required />
-            <label for="/">პაროლი</label>
-            <input type="password" required />
+            <div class="input-container">
+              <label for="user"><p>მომხმარებლის სახელი ან ფოსტა</p></label>
+              <input class="inputClass" name="user" type="text" required />
+            </div>
+            <div class="password-container">
+              <label for="password"><p>პაროლი</p></label>
+              <input
+                class="inputClass"
+                name="password"
+                type="password"
+                required
+              />
+              <svg
+                class="eye"
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                size="20"
+                color="var(--color_c2)"
+                height="20"
+                width="20"
+                xmlns="http://www.w3.org/2000/svg"
+                style="color: var(--color_c2)"
+              >
+                <path
+                  d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+                ></path>
+              </svg>
+            </div>
             <p>დაგავიწდა პაროლი? <a href="#">აღადგინე</a></p>
-            <button onclick="logIn()" class="btn btn-primary--green" id="logIn">
-              შესვლა
-            </button>
+            <div class="button-container">
+              <button class="btn btn-primary--green" id="logIn">შესვლა</button>
+            </div>
+          </form>
+        </div>
+        <div class="registration-container logInCont">
+          <div class="top"><p>რეგისტრაცია</p></div>
+          <form action="/">
+            <div class="input-container">
+              <label for="user"><p>მომხმარებლის სახელი</p></label>
+              <input class="inputClass" name="user" type="text" required />
+            </div>
+            <div class="name-surname">
+              <div class="boxInput">
+                <label for="name"><p>სახელი</p></label>
+                <input class="inputClass" name="user" type="text" required />
+              </div>
+              <div class="boxInput">
+                <label for="name"><p>გვარი</p></label>
+                <input class="inputClass" name="surname" type="text" required />
+              </div>
+            </div>
+            <div class="boxInput">
+              <label for="name"><p>ფოსტა</p></label>
+              <input class="inputClass" name="email" type="text" required />
+            </div>
+            <div class="boxInput input-container password-container">
+              <label for="password"><p>პაროლი</p></label>
+              <input
+                class="inputClass"
+                name="password"
+                type="password"
+                required
+              />
+              <svg
+                class="eye"
+                stroke="currentColor"
+                fill="currentColor"
+                stroke-width="0"
+                viewBox="0 0 24 24"
+                size="20"
+                color="var(--color_c2)"
+                height="20"
+                width="20"
+                xmlns="http://www.w3.org/2000/svg"
+                style="color: var(--color_c2)"
+              >
+                <path
+                  d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+                ></path>
+              </svg>
+            </div>
+            <div class="button-container">
+              <button class="btn btn-primary--green" id="logIn">რეგისტრაცია</button>
+            </div>
           </form>
         </div>
       </main>
