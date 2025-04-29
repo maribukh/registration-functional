@@ -11,6 +11,46 @@ body {
   height: 100vh;
 }
 
+body.dark-mode {
+  background-image: url(./bgDark.6e887057.svg);
+  background-color: #121212;
+}
+
+body.dark-mode header,
+body.dark-mode footer {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode button {
+  background-color: #1f66ad;
+}
+
+body.dark-mode .logInCont .btn:hover {
+  background-color: #1c5fa1;
+}
+
+body.dark-mode .logInCont {
+  background-color: #292929;
+}
+
+body.dark-mode .top {
+  border-bottom: 1px solid #191919;
+}
+
+body.dark-mode label p {
+  color: white;
+  font-weight: normal;
+}
+
+body.dark-mode .inputClass {
+  background-color: #212121;
+  border: none;
+}
+
+body.dark-mode .logIn-container a {
+  color: #ef4836;
+}
+
 a {
   text-decoration: none;
   color: hsla(0, 0%, 100%, 0.87);
@@ -58,6 +98,9 @@ header li {
 }
 
 .btn-primary--green {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #228b22;
   height: 50px;
   padding-left: 16px;
@@ -205,10 +248,18 @@ input:hover {
   width: 100%;
 }
 
+#user-welcome {
+  display: flex;
+  align-items: center;
+}
+
+#user-welcome h2 {
+  font-size: 1rem;
+}
+
 #user-welcome button {
-  margin-top: 1rem;
   width: 100%;
-  border-radius: 5px;
+  background-color: #0f2e3b;
 }
 
 footer {
