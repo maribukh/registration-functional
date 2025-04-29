@@ -17,11 +17,15 @@ body.dark-mode {
 }
 
 body.dark-mode header,
-body.dark-mode footer {
+body.dark-mode footer,
+body.dark-mode select,
+body.dark-mode #user-welcome button,
+body.dark-mode .registration-button button {
   background-color: #1e1e1e;
 }
 
-body.dark-mode button {
+body.dark-mode button,
+body.dark-mode #user-welcome h2 {
   background-color: #1f66ad;
 }
 

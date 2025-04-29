@@ -61,6 +61,9 @@ function hideForms(e) {
 }
 
 function togglePasswordVisibility(event) {
+  let eyeNoneVisibility = document.querySelector(".eyeNoneVisibility");
+  let eyeVisibility = document.querySelector(".eyeVisibility");
+
   let container = event
     ? event.target.closest(".password-container")
     : document.querySelector(".eyebox").closest(".password-container");
@@ -74,6 +77,14 @@ function togglePasswordVisibility(event) {
       passwordInput.type =
         passwordInput.type === "password" ? "text" : "password";
     }
+  }
+
+  if (eyeNoneVisibility.classList.contains("d-none")) {
+    eyeNoneVisibility.classList.remove("d-none");
+    eyeVisibility.classList.add("d-none");
+  } else {
+    eyeNoneVisibility.classList.add("d-none");
+    eyeVisibility.classList.remove("d-none");
   }
 }
 
@@ -211,7 +222,6 @@ window.addEventListener("DOMContentLoaded", () => {
 function toggleTheme() {
   let body = document.body;
   let icon = document.getElementById("theme-icon");
-  // let backgroundImgLight = document.getElement("body");
 
   body.classList.toggle("dark-mode");
 
