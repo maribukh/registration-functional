@@ -1,4 +1,3 @@
-
 let elements = {
   loginContainer: document.querySelector(".logIn-container"),
   registrationContainer: document.querySelector(".registration-container"),
@@ -7,12 +6,9 @@ let elements = {
   regButton: document.querySelector("button.brn.brn-second--default"),
 };
 
-
 function logIn() {
   let loginContainer = document.querySelector(".logIn-container");
-  let registrationContainer = document.querySelector(
-    ".registration-container"
-  );
+  let registrationContainer = document.querySelector(".registration-container");
 
   if (isUserLoggedIn()) {
     return;
@@ -27,13 +23,11 @@ function logIn() {
 }
 
 function registrationForm() {
-  let registrationContainer = document.querySelector(
-    ".registration-container"
-  );
+  let registrationContainer = document.querySelector(".registration-container");
   let loginContainer = document.querySelector(".logIn-container");
 
   if (isUserLoggedIn()) {
-    return; 
+    return;
   }
 
   if (registrationContainer.classList.contains("d-none")) {
@@ -46,9 +40,7 @@ function registrationForm() {
 
 function hideForms(e) {
   let loginContainer = document.querySelector(".logIn-container");
-  let registrationContainer = document.querySelector(
-    ".registration-container"
-  );
+  let registrationContainer = document.querySelector(".registration-container");
 
   let isInsideLogIn = loginContainer.contains(e.target);
   let isInsideRegistration = registrationContainer.contains(e.target);
@@ -107,7 +99,7 @@ function showWelcome(name) {
   let welcomeBlock = document.getElementById("user-welcome");
   if (welcomeBlock) {
     welcomeBlock.innerHTML = `
-      <div style="padding: 20px; display: flex; align-items: center; justify-content: space-between;">
+      <div style="padding: 20px">
         <h2>გამარჯობა, ${name}!</h2>
         <button onclick="logOut()" class="btn btn-primary--green">გასვლა</button>
       </div>
@@ -138,16 +130,13 @@ function logOut() {
     welcomeBlock.innerHTML = "";
   }
 
- 
   updateHeaderButtons(false);
 }
 
 window.addEventListener("DOMContentLoaded", () => {
-
   if (isUserRegistered() && isUserLoggedIn()) {
     showWelcome(getUserInfo().name);
   } else {
-    
     updateHeaderButtons(false);
   }
 
@@ -163,9 +152,11 @@ window.addEventListener("DOMContentLoaded", () => {
       let usernameInput = loginForm.querySelector("input[name='user']");
       let passwordInput = loginForm.querySelector("input[name='password']");
       let savedUser = getUserInfo();
+      let savedEmail = localStorage.getItem("email");
 
       if (
-        usernameInput.value === savedUser.username &&
+        (usernameInput.value === savedUser.username ||
+          usernameInput.value === savedEmail) &&
         passwordInput.value === savedUser.password
       ) {
         localStorage.setItem("isLoggedIn", "true");
@@ -187,23 +178,25 @@ window.addEventListener("DOMContentLoaded", () => {
 
       let nameInput = regForm.querySelector("input[name='user']");
       let surnameInput = regForm.querySelector("input[name='surname']");
+      let usernameInput = regForm.querySelector("input[name='username']");
       let emailInput = regForm.querySelector("input[name='email']");
       let passwordInput = regForm.querySelector("input[name='password']");
 
       if (
         nameInput.value &&
         surnameInput.value &&
-        emailInput.value &&
+        usernameInput.value &&
+        emailInput &&
         passwordInput.value
       ) {
-
         localStorage.setItem("name", nameInput.value);
         localStorage.setItem("lName", surnameInput.value);
-        localStorage.setItem("username", emailInput.value);
+        localStorage.setItem("username", usernameInput.value);
+        localStorage.setItem("email", emailInput.value);
         localStorage.setItem("password", passwordInput.value);
+
         localStorage.setItem("isLoggedIn", "true");
 
-        
         showWelcome(nameInput.value);
 
         regForm.reset();

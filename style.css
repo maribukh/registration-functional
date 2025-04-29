@@ -192,7 +192,6 @@ input:hover {
   position: relative;
 }
 
-
 .password-container .eye {
   position: absolute;
   bottom: 20%;
@@ -204,6 +203,12 @@ input:hover {
   grid-template-columns: repeat(2, auto);
   column-gap: 15px;
   width: 100%;
+}
+
+#user-welcome button {
+  margin-top: 1rem;
+  width: 100%;
+  border-radius: 5px;
 }
 
 footer {
