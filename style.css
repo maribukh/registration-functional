@@ -49,10 +49,15 @@ body.dark-mode label p {
 body.dark-mode .inputClass {
   background-color: #212121;
   border: none;
+  color: white;
 }
 
 body.dark-mode .logIn-container a {
   color: #ef4836;
+}
+
+body.dark-mode #theme-icon {
+  color: #ffc063 !important;
 }
 
 a {
@@ -243,6 +248,7 @@ input:hover {
   position: absolute;
   bottom: 20%;
   right: 9px;
+  cursor: pointer;
 }
 
 .name-surname {
