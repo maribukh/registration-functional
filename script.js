@@ -7,9 +7,9 @@ let elements = {
 };
 
 function Home() {
-  let homeIcon = document.getElementById("#home");
+  let homeIcon = document.getElementById("home");
   if (homeIcon) {
-    homeIcon.innerHTML = "fdfdf"
+    homeIcon.innerHTML = ``
   }
 }
 

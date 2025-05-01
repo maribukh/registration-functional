@@ -24,7 +24,7 @@ body.dark-mode .registration-button button {
   background-color: #1e1e1e;
 }
 
-body.dark-mode button,
+body.dark-mode header button,
 body.dark-mode #user-welcome h2 {
   background-color: #1f66ad;
 }
@@ -60,13 +60,18 @@ body.dark-mode #theme-icon {
   color: #ffc063 !important;
 }
 
+.body.dark-mode .news-container button {
+  color: hsl(0deg 0% 100% / 60%);
+  background-color: #191919;
+}
+
 a {
   text-decoration: none;
   color: hsla(0, 0%, 100%, 0.87);
 }
 
 select,
-button {
+header button {
   border: none;
   background-color: #0f2e3b;
   color: hsla(0, 0%, 100%, 0.87);
@@ -124,13 +129,18 @@ header li:hover {
   color: hsl(0, 0%, 69%);
 }
 
+.logIn-container,
+.registration-container {
+  margin: auto;
+}
+
 /* login container */
 
 main {
   height: 100vh;
-  display: flex;
+  /* display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: flex-start; */
   padding-bottom: 50px;
 }
 
@@ -223,7 +233,8 @@ input {
   border-radius: 5px;
 }
 
-input:hover {
+input:hover,
+.box {
   cursor: pointer;
 }
 
@@ -272,10 +283,133 @@ input:hover {
   background-color: #0f2e3b;
 }
 
+/* home container */
+
+.home-page-container {
+  width: 35.21%;
+  max-width: 100%;
+  padding: 0px 10px;
+  margin: auto auto auto min(50% - 338px, 100% - 1000px);
+  display: grid;
+  gap: 80px;
+  grid-template-columns: 676px;
+  color: hsl(0deg 0% 100% / 87%);
+}
+
+.home-page-container .activites {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.activites .box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 160px;
+  height: 120px;
+  background-color: #292929;
+  letter-spacing: 0.5px;
+  transition: padding-bottom 250ms, box-shadow 250ms;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 5px;
+  transition: 4ms;
+}
+
+.activites .box svg:hover {
+  transform: scale(1.1);
+}
+
+.home-page-container .box p {
+  margin-top: 10px;
+}
+
+/* news container */
+
+.news-container {
+  animation-duration: 250ms;
+  display: block;
+  animation-name: anShowup;
+}
+
+.news-container .title h3 {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 1rem;
+}
+
+.news-container .box {
+  background-color: #292929;
+  transition: padding-bottom 250ms, box-shadow 250ms;
+  border-radius: 8px;
+  padding: 0px 16px;
+  text-align: left;
+  border: 3px solid transparent;
+}
+
+.news-container .title,
+.date {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.news-container .title {
+  margin: 10px 0px;
+}
+
+.news-container .description {
+  margin-top: 20px;
+}
+
+.news-container .description span,
+.date {
+  color: hsl(0deg 0% 100% / 60%);
+}
+
+.news-container .image-container {
+  background-image: url(./new-year-poster.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-width: 600px;
+  height: 400px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-top: 3rem;
+}
+
+.news-container img {
+  width: 100%;
+  object-fit: scale-down;
+  transition: height 250ms;
+  overflow: hidden;
+}
+
+.news-container button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  width: 150px;
+  height: 50px;
+  transform: translateX(-50%);
+}
+
+.red {
+  color: red;
+}
+
 footer {
   width: 100%;
-  /* position: absolute;
-  bottom: 0; */
   padding: 1em;
   gap: 1em;
   display: flex;
