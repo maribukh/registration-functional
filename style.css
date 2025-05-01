@@ -60,7 +60,7 @@ body.dark-mode #theme-icon {
   color: #ffc063 !important;
 }
 
-.body.dark-mode .news-container button {
+body.dark-mode .news-container button {
   color: hsl(0deg 0% 100% / 60%);
   background-color: #191919;
 }
@@ -68,6 +68,11 @@ body.dark-mode #theme-icon {
 a {
   text-decoration: none;
   color: hsla(0, 0%, 100%, 0.87);
+}
+
+button {
+  outline: none;
+  border: none;
 }
 
 select,
@@ -379,12 +384,13 @@ input:hover,
   background-repeat: no-repeat;
   max-width: 600px;
   height: 400px;
-
   display: flex;
   align-items: center;
   justify-content: center;
   margin: auto;
   margin-top: 3rem;
+  padding-bottom: 40px;
+  margin-bottom: 50px;
 }
 
 .news-container img {
@@ -401,11 +407,11 @@ input:hover,
   border-radius: 999px;
   width: 150px;
   height: 50px;
-  transform: translateX(-50%);
+  margin: auto;
 }
 
 .red {
-  color: red;
+  color: red !important;
 }
 
 footer {

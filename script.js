@@ -7,42 +7,51 @@ let elements = {
 };
 
 function Home() {
-  let homeIcon = document.getElementById("home");
-  if (homeIcon) {
-    homeIcon.innerHTML = ``
-  }
+  let loginContainer = document.querySelector(".logIn-container");
+  let registrationContainer = document.querySelector(".registration-container");
+  let homePageContainer = document.querySelector(".home-page-container");
+
+  loginContainer.classList.add("d-none");
+  registrationContainer.classList.add("d-none");
+  homePageContainer.classList.remove("d-none");
 }
 
 function logIn() {
+  console.log("Login button clicked");
+
   let loginContainer = document.querySelector(".logIn-container");
-  let registrationContainer = document.querySelector(".registration-container");
+  let registrationContainer = document.querySelector(
+    ".registration-container"
+  );
+  let homePageContainer = document.querySelector(".home-page-container");
 
-  if (isUserLoggedIn()) {
-    return;
-  }
+  if (isUserLoggedIn()) return;
 
-  if (loginContainer.classList.contains("d-none")) {
-    loginContainer.classList.remove("d-none");
-    registrationContainer.classList.add("d-none");
-  } else {
-    loginContainer.classList.add("d-none");
-  }
+  loginContainer.classList.remove("d-none");
+  registrationContainer.classList.add("d-none");
+  homePageContainer.classList.add("d-none");
+
+  let loginInput = loginContainer.querySelector("input");
+  if (loginInput) loginInput.focus();
 }
 
 function registrationForm() {
-  let registrationContainer = document.querySelector(".registration-container");
+  console.log("Registration button clicked");
+
   let loginContainer = document.querySelector(".logIn-container");
+  let registrationContainer = document.querySelector(
+    ".registration-container"
+  );
+  let homePageContainer = document.querySelector(".home-page-container");
 
-  if (isUserLoggedIn()) {
-    return;
-  }
+  if (isUserLoggedIn()) return;
 
-  if (registrationContainer.classList.contains("d-none")) {
-    registrationContainer.classList.remove("d-none");
-    loginContainer.classList.add("d-none");
-  } else {
-    registrationContainer.classList.add("d-none");
-  }
+  registrationContainer.classList.remove("d-none");
+  loginContainer.classList.add("d-none");
+  homePageContainer.classList.add("d-none");
+
+  let regInput = registrationContainer.querySelector("input");
+  if (regInput) regInput.focus();
 }
 
 function hideForms(e) {
@@ -138,9 +147,13 @@ function logOut() {
   localStorage.removeItem("isLoggedIn");
 
   let welcomeBlock = document.getElementById("user-welcome");
+  let homeContainer = document.querySelector(".home-container");
+
   if (welcomeBlock) {
     welcomeBlock.innerHTML = "";
   }
+
+  if (homeContainer) homeContainer.classList.remove("d-none");
 
   updateHeaderButtons(false);
 }
