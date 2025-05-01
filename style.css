@@ -143,9 +143,6 @@ header li:hover {
 
 main {
   height: 100vh;
-  /* display: flex;
-  justify-content: center;
-  align-items: flex-start; */
   padding-bottom: 50px;
 }
 
