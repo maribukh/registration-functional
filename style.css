@@ -4,11 +4,15 @@
   box-sizing: border-box;
 }
 
+
+
 body {
   background-image: url(./body.svg);
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  display: flex;
+  height: 100%;
+
 }
 
 body.dark-mode {
@@ -24,6 +28,10 @@ body.dark-mode .registration-button button {
   background-color: #1e1e1e;
 }
 
+body.dark-mode header button {
+  height: 50px;
+}
+
 body.dark-mode header button,
 body.dark-mode #user-welcome h2 {
   background-color: #1f66ad;
@@ -31,6 +39,11 @@ body.dark-mode #user-welcome h2 {
 
 body.dark-mode .logInCont .btn:hover {
   background-color: #1c5fa1;
+}
+
+body.dark-mode .logInCont .btn {
+  background-color: #1f66ad;
+  color: hsl(0deg 0% 100% / 80%);
 }
 
 body.dark-mode .logInCont {
@@ -92,6 +105,10 @@ ul {
 }
 
 .container {
+  height: 100vh;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
   width: 100%;
 }
 
@@ -142,7 +159,7 @@ header li:hover {
 /* login container */
 
 main {
-  height: 100vh;
+  flex: 1;
   padding-bottom: 50px;
 }
 
@@ -190,7 +207,7 @@ label p {
 }
 
 .button-container {
-  min-width: 200px;
+  width: 100%;
   min-height: 46px;
   display: flex;
   align-items: center;
@@ -288,7 +305,7 @@ input:hover,
 /* home container */
 
 .home-page-container {
-  width: 35.21%;
+  /* width: 35.21%; */
   max-width: 100%;
   padding: 0px 10px;
   margin: auto auto auto min(50% - 338px, 100% - 1000px);
@@ -305,6 +322,25 @@ input:hover,
   gap: 12px;
   flex-wrap: wrap;
   justify-content: start;
+  color: #37474f;
+}
+
+body.dark-mode .news-container .title,
+body.dark-mode .news-container a,
+body.dark-mode .date span,
+body.dark-mode .activites .box,
+body.dark-mode .news-container .reaction-container {
+  color: hsl(0deg 0% 100% / 87%);
+}
+
+body.dark-mode .description,
+body.dark-mode .date span {
+  color: hsl(0deg 0% 100% / 60%);
+}
+
+body.dark-mode .activites .box,
+body.dark-mode .news-container .box {
+  background-color: #292929;
 }
 
 .activites .box {
@@ -315,7 +351,7 @@ input:hover,
   justify-content: center;
   width: 160px;
   height: 120px;
-  background-color: #292929;
+  background-color: #fff;
   letter-spacing: 0.5px;
   transition: padding-bottom 250ms, box-shadow 250ms;
   border-radius: 8px;
@@ -347,12 +383,20 @@ input:hover,
 }
 
 .news-container .box {
-  background-color: #292929;
+  box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 5px;
+  background-color: #fff;
   transition: padding-bottom 250ms, box-shadow 250ms;
   border-radius: 8px;
   padding: 0px 16px;
   text-align: left;
   border: 3px solid transparent;
+  color: #37474f;
+}
+
+.news-container .title,
+.news-container a,
+.date span {
+  color: #37474f;
 }
 
 .news-container .title,
@@ -370,7 +414,7 @@ input:hover,
   margin-top: 20px;
 }
 
-.news-container .description span,
+body.dark-mode .news-container .description span,
 .date {
   color: hsl(0deg 0% 100% / 60%);
 }
@@ -387,7 +431,7 @@ input:hover,
   margin: auto;
   margin-top: 3rem;
   padding-bottom: 40px;
-  margin-bottom: 50px;
+  /* margin-bottom: 50px; */
 }
 
 .news-container img {
@@ -398,6 +442,9 @@ input:hover,
 }
 
 .news-container button {
+  background-color: #eceff1;
+  color: #757575;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -405,7 +452,17 @@ input:hover,
   width: 150px;
   height: 50px;
   margin: auto;
+  gap: 2px;
+  margin-top: 2rem;
 }
+
+.news-container .reaction-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
 
 .red {
   color: red !important;
@@ -426,6 +483,11 @@ footer {
 footer a {
   padding: 5px;
   transition: background-color 350ms;
+
+}
+
+footer svg {
+  color: hsl(0deg 0% 100% / 87%);
 }
 
 .footer-information {
