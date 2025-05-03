@@ -373,6 +373,11 @@ body.dark-mode .news-container .box {
   animation-duration: 250ms;
   display: block;
   animation-name: anShowup;
+
+}
+
+.news {
+  margin-bottom: 1rem;
 }
 
 .news-container .title h3 {
@@ -391,6 +396,7 @@ body.dark-mode .news-container .box {
   text-align: left;
   border: 3px solid transparent;
   color: #37474f;
+  position: relative;
 }
 
 .news-container .title,
@@ -454,6 +460,8 @@ body.dark-mode .news-container .description span,
   margin: auto;
   gap: 2px;
   margin-top: 2rem;
+  z-index: 100;
+  position: relative;
 }
 
 .news-container .reaction-container {
@@ -461,6 +469,26 @@ body.dark-mode .news-container .description span,
   align-items: center;
   margin-bottom: 10px;
   gap: 10px;
+}
+
+.line-2 {
+  z-index: 0;
+  position: relative;
+  height: 2px;
+  background-color: #eceff1;
+  bottom: 25px;
+}
+
+#main-photo {
+  max-height: 300px;
+  transition: max-height 0.4s ease;
+  width: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+#main-photo.expanded {
+  max-height: none;
 }
 
 
