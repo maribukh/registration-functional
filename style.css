@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  border: 1px solid red;
 }
 
 
@@ -97,6 +98,10 @@ header button {
   font-weight: 500;
 }
 
+header ul {
+  height: 50px;
+}
+
 ul {
   display: flex;
   justify-content: space-between;
@@ -113,7 +118,6 @@ ul {
 }
 
 header {
-  max-width: 1915px;
   height: 50px;
   display: flex;
   align-items: center;
@@ -527,9 +531,11 @@ footer a {
 
 }
 
-footer svg {
-  color: hsl(0deg 0% 100% / 87%);
+footer svg path {
+  color: hsl(0deg 0% 100% / 87%) !important;
 }
+
+
 
 .footer-information {
   display: flex;

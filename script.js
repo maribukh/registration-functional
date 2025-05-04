@@ -149,16 +149,18 @@ function logOut() {
     welcomeBlock.innerHTML = "";
   }
 
-  if (homeContainer) homeContainer.classList.remove("d-none");
-
   updateHeaderButtons(false);
+  Home(); 
 }
+
 
 window.addEventListener("DOMContentLoaded", () => {
   if (isUserRegistered() && isUserLoggedIn()) {
     showWelcome(getUserInfo().name);
+    Home(); 
   } else {
     updateHeaderButtons(false);
+    Home(); 
   }
 
   document.querySelectorAll(".eyebox").forEach((eyebox) => {
