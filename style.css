@@ -426,7 +426,6 @@ body.dark-mode .news-container .description span,
 }
 
 .news-container .image-container {
-  background-image: url(./new-year-poster.png);
   background-size: cover;
   background-repeat: no-repeat;
   max-width: 600px;
@@ -437,7 +436,18 @@ body.dark-mode .news-container .description span,
   margin: auto;
   margin-top: 3rem;
   padding-bottom: 40px;
-  /* margin-bottom: 50px; */
+}
+
+.img-1 {
+  background-image: url(./new-year-poster.png);
+}
+
+.img-2 {
+  background-image: url(./C5pUl8uZLxe5B03LDA04.jpg);
+}
+
+.img-3 {
+  background-image: url(./EkLVlpbxmVyoRaczJ2nx.jpg);
 }
 
 .news-container img {
@@ -471,6 +481,10 @@ body.dark-mode .news-container .description span,
   gap: 10px;
 }
 
+body.dark-mode .line-2 {
+  background-color: #191919;
+}
+
 .line-2 {
   z-index: 0;
   position: relative;
@@ -479,16 +493,15 @@ body.dark-mode .news-container .description span,
   bottom: 25px;
 }
 
-#main-photo {
+.main-photo {
   max-height: 300px;
-  transition: max-height 0.4s ease;
-  width: auto;
-  display: block;
-  margin: 0 auto;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  margin-top: 3rem;
 }
 
-#main-photo.expanded {
-  max-height: none;
+.main-photo.expanded {
+  max-height: 1000px;
 }
 
 
@@ -528,6 +541,11 @@ footer svg {
   width: 1px;
   height: 24px;
   background-color: hsl(0deg 0% 100% / 87%);
+}
+
+i:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .d-none {

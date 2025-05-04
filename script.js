@@ -20,9 +20,7 @@ function logIn() {
   console.log("Login button clicked");
 
   let loginContainer = document.querySelector(".logIn-container");
-  let registrationContainer = document.querySelector(
-    ".registration-container"
-  );
+  let registrationContainer = document.querySelector(".registration-container");
   let homePageContainer = document.querySelector(".home-page-container");
 
   if (isUserLoggedIn()) return;
@@ -39,9 +37,7 @@ function registrationForm() {
   console.log("Registration button clicked");
 
   let loginContainer = document.querySelector(".logIn-container");
-  let registrationContainer = document.querySelector(
-    ".registration-container"
-  );
+  let registrationContainer = document.querySelector(".registration-container");
   let homePageContainer = document.querySelector(".home-page-container");
 
   if (isUserLoggedIn()) return;
@@ -261,18 +257,43 @@ window.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const expandBtn = document.getElementById("expand-photo-btn");
-  const photo = document.getElementById("main-photo");
+  let expandButtons = document.querySelectorAll(".expand-photo-btn");
+  let modal = document.getElementById("photo-modal");
+  let modalImg = document.getElementById("modal-img");
+  let closeBtn = document.querySelector(".close-btn");
 
-  if (expandBtn && photo) {
-    expandBtn.addEventListener("click", () => {
+  expandButtons.forEach((btn) => {
+    let photo = btn.closest(".box").querySelector(".image-container");
+
+    btn.addEventListener("click", () => {
       photo.classList.toggle("expanded");
 
       if (photo.classList.contains("expanded")) {
-        expandBtn.textContent = "დახურვა";
+        btn.textContent = "დახურვა";
       } else {
-        expandBtn.textContent = "მეტი"; 
+        btn.innerHTML = `მეტი
+          <svg stroke="currentColor" fill="currentColor" stroke-width="0"
+            viewBox="0 0 24 24" height="1em" width="1em"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 12l-1.41-1.41L13 16.17V4h-2v12.17l-5.58-5.59L4 12l8 8 8-8z"></path>
+          </svg>`;
       }
     });
-  }
+
+    photo.addEventListener("click", () => {
+      let img = photo.querySelector("img");
+      modalImg.src = img.src;
+      modal.classList.add("show");
+    });
+  });
+
+  closeBtn.addEventListener("click", () => {
+    modal.classList.remove("show");
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("show");
+    }
+  });
 });
