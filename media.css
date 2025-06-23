@@ -1,112 +1,155 @@
-@media screen and (max-width: 1024px) {
-    header {
-        margin-bottom: 60px;
-    }
+@media only screen and (max-width: 900px) {
+  .left ul li a {
+    font-size: 15px;
+  }
 
-    .logInCont {
-        width: 90%;
-        max-width: 500px;
-        padding: 15px 25px 30px;
-    }
+  header {
+    margin-bottom: 50px;
+  }
 
-    .right ul li {
-        padding: 0 0.5rem;
-    }
+  .right ul {
+    gap: 10px;
+  }
 
-    .left ul li {
-        padding: 0 0.5rem;
-    }
+  .right ul li select {
+    padding: 5px;
+    font-size: 14px;
+  }
+
+  .right ul li button {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  .activites {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .news-container .title {
+    font-size: 18px;
+  }
+
+  .news-container .news .box .title a {
+    font-size: 17px;
+  }
+
+  .news-container .news .box .description span {
+    font-size: 15px;
+  }
+
+  .home-page-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .left ul li:not(#home) {
+    display: none;
+  }
+
+  .activites {
+    justify-content: space-between !important;
+  }
 }
 
+@media only screen and (max-width: 768px) {
+  .right ul li select {
+    font-size: 13px;
+  }
 
-@media screen and (max-width: 768px) {
-    header {
-        padding: 10px 0;
-        margin-bottom: 40px;
-    }
+  .right ul li button {
+    padding: 7px 10px;
+    font-size: 13px;
+  }
 
+  .activites {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  }
 
+  .news-container .title {
+    font-size: 16px;
+  }
 
-    header .home {
-        display: block;
-    }
+  .news-container .news .box .title a {
+    font-size: 16px;
+  }
 
-    header .right {
-        width: 100%;
-    }
-
-    header .left ul,
-    header .right ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 5px 0;
-    }
-
-    header li {
-        margin: 5px;
-    }
-
-    .btn-primary--green {
-        height: 40px;
-    }
-
-    .logInCont {
-        width: 90%;
-        padding: 15px 20px 25px;
-    }
-
-    .name-surname {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    .button-container {
-        margin-top: 30px;
-    }
-
-    footer {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .line {
-        width: 80%;
-        height: 1px;
-    }
+  .news-container .news .box .description span {
+    font-size: 14px;
+  }
 }
 
-@media screen and (max-width: 480px) {
-    header li {
-        font-size: 14px;
-    }
+@media only screen and (max-width: 500px) {
+  header {
+    flex-direction: column;
+    padding: 10px 0;
+  }
 
-    header svg {
-        width: 22px;
-        height: 22px;
-    }
+  .left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
 
-    .logInCont {
-        width: 95%;
-        padding: 10px 15px 20px;
-    }
+  .right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
 
-    input {
-        height: 40px;
-        font-size: 14px;
-    }
+  .right ul {
+    width: 100%;
+    justify-content: space-around;
+  }
 
-    label p {
-        font-size: 13px;
-    }
+  .activites {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 10px;
+  }
 
-    .top {
-        margin-bottom: 15px;
-        font-size: 16px;
-    }
+  .activites .box {
+    padding: 15px;
+  }
 
-    .btn-primary--green {
-        padding-left: 12px;
-        padding-right: 12px;
-        font-size: 14px;
-    }
+  .activites .box .icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .activites .box .icon p {
+    font-size: 14px;
+  }
+
+  .news-container {
+    padding: 10px;
+  }
+
+  .news-container .news .box {
+    padding: 15px;
+  }
+
+  .news-container .news .box .title a {
+    font-size: 15px;
+  }
+
+  .news-container .news .box .description span {
+    font-size: 13px;
+  }
+
+  .logIn-container,
+  .registration-container {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  .name-surname {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .name-surname .boxInput {
+    width: 100%;
+  }
 }
